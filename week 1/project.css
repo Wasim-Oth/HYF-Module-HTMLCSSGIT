@@ -1,0 +1,29 @@
+
+  	body{
+  		background: #7a9;
+  		margin-left: 100px;	
+  	}
+  	#img{
+  		float:right;
+  		margin-right: 140px;
+  	}
+  	.title{
+  		margin-top: 50px;
+  	}
+
+  	.space{
+  		width:80%;
+  		height:2px;
+  		background: #caa;	
+  		margin-top: 40px;
+  	}
+
+  	#personal, #education, #working {
+  		height:30px;
+  		width:70%;
+  		background: #caa;
+
+  	}
+
+
+
