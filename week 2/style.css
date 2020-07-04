@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+h1{
+    text-align: center;
+    background: rgb(123, 221, 211);
+    height: 80px;
+}
+
+h2{
+    text-align: center;
+    background: rgb(117, 172, 166);
+    height: 60px;
+}
+
+main #grid-floats, #grid-flex{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.3fr 1.3fr 1.3fr ;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+ #grid-floats :first-child, #grid-flex :first-child {
+    grid-column: 1/3; 
+}
+#grid-floats :last-child{
+    grid-column:3/5 ;
+}
+
+ #grid-floats .grid-item, #grid-flex .grid-item{
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 5px;
+    margin:5px;
+}
+
+
+ #grid-floats  h3{
+    text-align: center;
+}
+ #grid-floats p{
+    padding: 5px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+img{
+    height: 100px;
+    float: left;
+}
+
+ #grid-floats .grid-item:hover, #grid-flex .grid-item:hover {
+    /* background: rgb(123, 221, 211); */
+      box-shadow: 3px 4px 9px black;
+    
+}
+
+
+/* ----------------------------flex--------------------------------------- */
+
+
+#grid-flex .grid-item{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#grid-flex .grid-item h3{
+    order:-1;
+}
+#grid-flex .grid-item p{
+    order:0;    
+}
+#grid-flex .grid-item img{
+   order:1;
+}
+
+
+
+/* ------------------------------------media------------------------------------- */
+
+
+
+/* -------------------------------------ipad------------------------------------- */
+
+@media (min-width: 600px) and (max-width: 1024px){
+
+
+     /* if i change the color of the background the half of the pictures get a white ugly background i dont understand WHY? */
+     
+    /* body {background:  rgb(200, 225, 231); */
+    /* } */
+
+
+
+    main #grid-floats, #grid-flex{
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1.5fr 1.3fr 1.3fr  ;
+        padding: 10px;
+        margin-left: 10px;
+    }
+    #grid-floats :first-child, #grid-flex :first-child {
+        grid-column: 1/3; 
+     }
+     #grid-floats :last-child{
+        grid-column:3/4 ;
+    }
+    }
+
+
+
+    /* ---------------------------------phone-------------------------------------- */
+
+
+
+
+@media (max-width: 600px){
+    main #grid-floats, #grid-flex{
+    
+        display: grid;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: 1.5fr ;
+        padding: 10px;
+        margin-left: 10px;
+    }
+    #grid-floats :first-child, #grid-flex :first-child {
+        grid-column: 1/2; 
+     }
+     #grid-floats :last-child{
+        grid-column:1/2 ;
+    }
+    }
+
+
+
