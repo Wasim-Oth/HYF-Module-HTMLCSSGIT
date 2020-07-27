@@ -1,13 +1,14 @@
 1- How do I create a hidden file or folder? How do I display it in the CLI?
 
-to creat a folder:
-mkdir (Folder Name)
+to creat a hidden folder:
+mkdir .Folder Name
 
-to make it hidden:
-attrib +h (FolderName)
+to creat a hidden file:
+touch .filename
 
-to show it again:
-attrib -h (Folder Name)
+How do I display it in CLI?
+  ls -a
+
 
 
 2- How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
